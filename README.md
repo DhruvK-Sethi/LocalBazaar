@@ -1,6 +1,10 @@
 # APEX
 
-The e-commerce web platform connects local shops to customers by providing an online marketplace for purchasing products. It uses the user's location to display results based on the closest distance from their location, ensuring fast and convenient delivery. The platform also provides prediction graphs for shopkeepers to help them understand the latest demand for their products and make informed decisions about stock levels. This information helps to increase the efficiency and profitability of local shops while providing an easy and convenient shopping experience for customers.
+This is  an E-Commerce Web Platform which connects local shops to customers by providing them an online marketplace for selling and locating products near them respectively.
+
+User's location is collected to calculate and display the nearest shops available with respect to their location, ensuring them a hassle free market experience.
+
+This platform also provides prediction graphs to shopkeepers, that helps them to understand the varied demands of the products thus enabling them to increase the efficiency and profitability.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
