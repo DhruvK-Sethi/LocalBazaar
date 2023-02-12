@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Velociraptor Team Panel</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style_admin_panel.css') }}">
+        <div id="divTitleContainer">
+            <h1 id = "hTitle">Velociraptor Team Panel</h1>
+            <h2 id = "hSubtitle">Welcome {{user}}</h2>
+        </div>
+    </head>
+    <body>
+        <div id="divListContainer">
+            <h2 id="hUserlistHeading">Admin List</h2>
+            <table id="tableAdmins">
+            <tr class="row">
+                <th class="divRowItem">Username</th>
+                <th class="divRowItem">Name</th>
+                <th class="divRowItem">Password</th>
+            </tr>
+            {% for usr in users_list %}
+                <tr class="row">
+                    <td class="divRowItem">{{ usr.username }}</td>
+                    <td class="divRowItem">{{ usr.name }}</td>
+                    <td class="divRowItem">{{ usr.password }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <h2 id="hUserlistHeading">Applications</h2>
+            <table id="tableApplications">
+            <tr class="applicationRow">
+                <th class="divRowItem">Name</th>
+                <th class="divRowItem">Email</th>
+                <th class="divRowItem">Species</th>
+                <th class="divRowItem">Address</th>
+                <th class="divRowItem">Feedback</th>
+            </tr>
+            {% for appl in applications_list %}
+                <tr class="applicationRow">
+                    <td class="divRowItem">{{ appl.name }}</td>
+                    <td class="divRowItem">{{ appl.email }}</td>
+                    <td class="divRowItem">{{ appl.species }}</td>
+                    <td class="divRowItem">{{ appl.address }}</td>
+                    <td class="divRowItem">{{ appl.feedback }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_search.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+    <!-- <script src="index.js"></script> -->
+
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="logoContent">
+            <img src="/static/res/Logo.png" alt="1" height="60px" width="60px">
+            <h1 class="logoName">LocaLite</h1>
+        </div>
+        <div class="search-bar">
+        <form action="#" method="post" id = "searchQuery">
+            <input type="text" placeholder=" Search for Stuff!" name="query" value="{{ query }}">
+        </form>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="userWelcome">
+            <p> Welcome Back, {{ username }} </p>
+            <img src="https://i.pravatar.cc/60" alt="" onclick="window.location.href = '{{ url_for('profile') }}'">
+        </div>
+    </header>
+    <div class="subHeaderContainer">
+    <span class="subHeader">
+        <div class="categoryButtonContainer" id="categoryBakeryLink">
+            <a class="categoryTitle" href="{{ url_for('bakery') }}">Bakery</a>
+            <h1 class="categoryIcon">🍰</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryStationaryLink">
+            <a class="categoryTitle" href="{{ url_for('stationary') }}">Stationary</a>
+            <h1 class="categoryIcon">️📋</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryGadgetsLink">
+            <a class="categoryTitle" href="{{ url_for('gadgets') }}">Gadgets</a>
+            <h1 class="categoryIcon">📱</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryHouseholdLink">
+            <a class="categoryTitle" href="{{ url_for('household') }}">Household</a>
+            <h1 class="categoryIcon">🧴</h1>
+        </div>
+    </span>
+    </div>
+
+<!------------------------------------------------------------------------------------------------------------->
+<!--Header Ends here-->
+
+
+    <section class="resultsContainer" >
+        <table class="resultsTable">
+            <tr class="resultsRow">
+                <th>Distance</th>
+                <th>Product Image</th>
+                <th>Shop Email</th>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+            {% for result in results %}
+            <tr class="resultsRow" onclick="window.location.href = '{{ url_for('product',shop=result.shop,prod=result.id,message='') }}'">
+                <td>{{ "{:.1f}".format(result.distance) }}km</td>
+                <td>Image</td>
+                <td>{{ result.shop }}</td>
+                <td>{{ result.name }}</td>
+                <td>{{ result.price }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="/static/res/logo.png" alt=""></a>
+                    <h1 class="logoName" style="color: white;"> Sweet Cake </h1>
+                </div>
+
+                <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus
+                    maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>apex@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit">
+            created by <span>APEX</span> |all rights reserved !
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

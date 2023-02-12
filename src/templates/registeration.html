@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_registeration.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toggled-search-bar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/static/index_registeration.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+       crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+       crossorigin=""></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logoContent">
+            <img src="{{ url_for('static',filename='res/Logo.png') }} " alt="1" height="60px" width="60px">
+            <h1 class="logoName">LocaLite</h1>
+        </div>
+        <nav class="navbar">
+            <a href="#buyerRegisteration">Buyer</a>
+            <a href="#sellerRegisteration">Seller</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <section class="buyerRegisteration" id="buyerRegisteration">
+        <div class="homecontent" id="divHomeBuyer">
+            <h2 class="h">Join as a customer
+            </h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="homecontent" id="divMapBuyer"></div>
+        <div class="buyerFormContainer">
+            <form action="#" method="post">
+                <input type="hidden" name="form_id" value="buyer">
+                <span class="formRow">
+                  <label for="name">Name :</label>
+                  <input type="text" id="inputName" name="name"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="email">Email :</label>
+                  <input type="email" id="inputEmail" name="email"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="phone">Phone :</label>
+                  <input id="inputPhone" name="phone"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="password">Password :</label>
+                  <input type="password" id="inputPassword" name="password"><br><br>
+                </span>
+
+                <span class="formRow">
+                <label for="states">State:</label>
+                <select name="state" class="states">
+                  <option value="" disabled selected>Select State</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                <label for="cities">City:</label>
+                <select name="city" class="cities">
+                  <option value="" disabled selected>Select City</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                  <label for="location">Location :</label>
+                  <input type="text" readonly id="inputLatitudeBuyer" name="latitude"><br><br>
+                  <input type="text" readonly id="inputLongitudeBuyer" name="longitude"><br><br>
+                </span>
+                <span class="formRow">
+                    <a id="locationLinkBuyer" class="locLink">Use my current location</a>
+                </span>
+                <span class="formRow">
+                    <a id="mapLinkBuyer" class="locLink">Open Map</a>
+                </span>
+                <span class="formRow">
+                  <input type="submit" class="submitBtn" id="btnSubmit" value="Register">
+            </form>
+        </div>
+    </section>
+
+    <section class="sellerRegisteration" id="sellerRegisteration">
+        <div class="sellerFormContainer">
+            <form action="#" method="post">
+                <input type="hidden" name="form_id" value="seller">
+                <span class="formRow">
+                  <label for="name">Name :</label>
+                  <input type="text" id="inputName" name="name"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="email">Email :</label>
+                  <input type="email" id="inputEmail" name="email"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="phone">Phone :</label>
+                  <input id="inputPhone" name="phone"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="password">Password :</label>
+                  <input type="password" id="inputPassword" name="password"><br><br>
+                </span>
+
+
+                <span class="formRow">
+                  <label for="shopName">Shop Name :</label>
+                  <input id="inputShopName" name="shopName"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                <label for="states">State:</label>
+                <select name="state" class="states">
+                  <option value="" disabled selected>Select State</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                <label for="cities">City:</label>
+                <select name="city" class="cities">
+                  <option value="" disabled selected>Select City</option>
+                </select>
+                </span>
+                <span class="formRow">
+                <label for="category">Category:</label>
+                <select name="category" class="categoryDD">
+                  <option value="bakery" >Bakery</option>
+                  <option value="stationary" >Stationary</option>
+                  <option value="household" >Household</option>
+                  <option value="gadgets" >Gadgets</option>
+                </select>
+                </span>
+                <span class="formRow">
+                  <label for="location">Location :</label>
+                  <input type="text" readonly id="inputLatitudeSeller" name="latitude"><br><br>
+                  <input type="text" readonly id="inputLongitudeSeller" name="longitude"><br><br>
+                </span>
+                <span class="formRow">
+                    <a id="locationLinkSeller" class="locLink">Use my current location</a>
+                </span>
+                <span class="formRow">
+                    <a id="mapLinkSeller" class="locLink">Open Map</a>
+                </span>
+
+                <span class="formRow">
+                  <input type="submit" class="submitBtn" id="btnSubmit" value="Register">
+            </form>
+        </div>
+        <div class="homecontent" id="divHomeSeller">
+            <h2 class="h">Join as a Seller
+            </h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="homecontent" id="divMapSeller"></div>
+    </section>
+
+    <!-- <hr> -->
+    <section class="blogs" id="about">
+
+        <div class="swiper blogs-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="{{ url_for('static',filename='res/cake1.webp') }}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>About Us</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <hr> -->
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="{{ url_for('static',filename='res/logo.png') }}" alt=""></a>
+                    <h1 class="logoName" style="color: white;"> Sweet Cake </h1>
+                </div>
+
+                <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus
+                    maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>apex@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit">
+            created by <span>APEX</span> |all rights reserved !
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

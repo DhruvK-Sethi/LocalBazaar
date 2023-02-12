@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Velociraptor Bussiness Solutions - About Us</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style_about.css') }}">
+        <div id="divHeadingContainer">
+            <p id="hHeading">VELOCIRAPTORS</p>
+        </div>
+        <nav id="navLinks">
+            <!-- nav buttons-->
+            <a id="aHomeLink" class = "navlink" href="{{ url_for("home") }}">Home</a>
+            <a id="aFormLink" class = "navlink" href="{{ url_for("form") }}">Sign Up</a>
+        </nav>
+    </header>
+    <body>
+        <div id="divTitleContainer">
+            <h1 id="hTitle">VELOCIRAPTOR BUSSINESS SOLUTIONS</h1>
+            <h1 id="hSubtitle">Unleashing the power of speed and intelligence</h1>
+        </div>
+        <div id="divContentContainer" class="contentContainer">
+            <div id="divInfoContainer" class="infoContainer">
+                <h1 id="hParagraphHeader" class="paraHeader">How it started</h1>
+                <p id="pDescription" class="descriptor">As the meteor impacts devastated the earth, we velociraptors were forced to 
+                adapt quickly in order to survive. We knew that our traditional hunting and scavenging methods would no longer be 
+                sufficient in the new world. So, we began to use our intelligence and cunning to find new ways to thrive. 
+                We formed secret societies, using our speed and agility to sneak into the ruins of human cities and scavenge for resources. 
+                We discovered that the humans had left behind vast amounts of technology and resources that we could use to our advantage. 
+                We soon realized that we could use our skills and resources to start our own businesses. 
+                We began to build trading networks and establish ourselves as powerful businessmen in the new world. 
+                We used our speed and agility to quickly adapt to the changing environment and become successful business owners, 
+                all while keeping our true identities a secret from the rest of the world.</p>
+            </div>
+            <img id="imgVelociraptors" class="image" src="{{ url_for('static',filename='res/DALLE 2023-01-17 21.36.15.png') }}">
+        </div>
+        <div id="divContentContainer2" class="contentContainer">
+            <img id="imgVelociraptors2" class="image" src="{{ url_for('static',filename='res/DALLE 2023-01-17 21.37.29.png') }}">
+            <div id="divInfoContainer2" class="infoContainer">
+                <h1 id="hParagraphHeader2" class="paraHeader">How it's going</h1>
+                <p id="pDescription2" class="descriptor">Our special abilities, such as our intelligence and cunning, 
+                proved to be invaluable assets in the business world. We were able to outsmart and outmaneuver our competitors, 
+                making us the top choice for trading and commerce. We learned how to read and understand financial statements 
+                and market trends, allowing us to make smart and profitable investments. Our speed and agility also came in handy,
+                allowing us to quickly respond to changes in the market and adapt to new opportunities. We were able to make quick 
+                deals and transactions, always staying ahead of the game.
+                Our physical abilities were also a great advantage. We used our powerful jaws and claws 
+                to protect our businesses and assets, ensuring that we were always one step ahead of our rivals. We were able to intimidate 
+                our competitors and gain an upper hand in negotiations. Our ability to communicate and work together in packs also gave 
+                us an edge, as we were able to coordinate and strategize effectively. We were able to build a strong network of loyal 
+                partners and employees, who helped us to expand our businesses and increase our profits.</p>
+                <a id"aFormInlineLink" class="navlink" href="/form">Join us now!</a>
+            </div>
+        </div>
+    </body>
+</html>
+

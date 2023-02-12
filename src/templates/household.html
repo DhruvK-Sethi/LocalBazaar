@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_household.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toggled-search-bar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <img src="/static/res/good.jpg" alt="1" height="40px" width="40px">
+            <h1 class="logoName">Gadgets</h1>
+        </div>
+
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#product">product</a>
+            <a href="#blogs">blogs</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Search...">
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="homecontent">
+            <h2 class="h">Household goods for everyone</h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua.</p>
+            <div class="home-btn">
+                <a href="#"><button>see more</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="product" id="product">
+        <div class="heading">
+            <h2>Our Exclusive Stores</h2>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store0</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates
+                            atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates
+                            atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 6</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates
+                            atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good5.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Store 7</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non qui iure libero
+                            corrupti
+                            recusandae exercitationem aut blanditiis consequatur odio, voluptatum quae voluptates
+                            atque
+                            sit
+                            maiores, quod cum quas saepe.</p>
+                        <div class="orderNow">
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <section class="blogs" id="blogs">
+
+        <div class="swiper blogs-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Blogs</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                        </p>
+                        <a href="#blogs" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Blogs</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                        </p>
+                        <a href="#blogs" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="/static/res/good2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Blogs</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti aliquam
+                            molestiae ut maiores deleniti deserunt, officia fugiat, amet delectus iure, explicabo nulla
+                            cum. Amet doloremque repudiandae dolore pariatur nostrum?
+                        </p>
+                        <a href="#blogs" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="review" id="review">
+        <div class="heading">
+            <h2>client review</h2>
+        </div>
+
+
+        <div class=" swiper review-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="/static/res/man5.webp" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Aston Hey</h3>
+                            <p>UI / UX designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="/static/res/man2.webp" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Jody Ale</h3>
+                            <p>Professor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="/static/res/man4.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Derian Ecton</h3>
+                            <p>Writer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="/static/res/man3.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Hardy Devid</h3>
+                            <p>Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="/static/res/logo.png" alt=""></a>
+                    <h1 class="logoName" style="color: rgb(255, 255, 255);"> Gadgets </h1>
+                </div>
+
+                <p style="color: rgb(246, 240, 240);">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                    accusamus
+                    maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>apex@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit">
+            created by <span>APEX</span> |all rights reserved !
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/static/index_household.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+
+html {
+    background: linear-gradient(225deg,DarkSlateBlue ,rgb(40,10,75) ,RebeccaPurple );
+    /* background: rgb(22, 22, 30); */
+    background-attachment: fixed;
+    color: white;
+}
+header{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    background: linear-gradient(to right,DarkSlateBlue,DarkViolet);
+    /* background: rgb(76, 94, 137); */
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: fit-content;
+}
+#divHeadingContainer{
+    justify-self: flex-start;
+    margin-left: 5%;
+}
+#hHeading{
+    line-height: 0;
+    /* color: rgb(115, 218, 202); */
+    letter-spacing: 5px;
+    font-weight: 200;
+    font-family: monospace;
+    font-size: 24pt;
+}
+nav{
+    justify-self: flex-end;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+body {
+    background: transparent;
+}
+.navlink{
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 24px;
+    color: pink;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+

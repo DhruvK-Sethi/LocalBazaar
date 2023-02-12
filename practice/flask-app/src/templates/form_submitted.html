@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Velociraptor Bussiness Solutions</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style_form_submitted.css') }}">
+        <div id="divHeadingContainer">
+            <p id="hHeading">VELOCIRAPTORS</p>
+        </div>
+        <nav id="navLinks">
+            <!-- nav buttons-->
+            <a id="aAboutLink" class = "navlink" href="{{ url_for("about") }}">About us</a>
+            <a id="aHomeLink" class = "navlink" href="{{ url_for("home") }}">Home</a>
+        </nav>
+    </header>
+    <body>
+        <h3 id="hMessage">An intelligent velociraptor will be reviewing your application soon.</h3>
+        <br>
+        <p>Name - {{name}}</p>
+        <p>Email - {{email}}</p>
+        <p>Species - {{species}}</p>
+        <p>Address - {{address}}</p>
+        <p>Feedback - {{feedback}}</p>
+    </body>
+</html>

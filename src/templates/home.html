@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_home.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+    <!-- <script src="index.js"></script> -->
+
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="logoContent">
+            <img src="/static/res/Logo.png" alt="1" height="60px" width="60px">
+            <h1 class="logoName">LocaLite</h1>
+        </div>
+        <div class="search-bar">
+        <form action="#" method="post" id = "searchQuery">
+            <input type="text" placeholder=" Search for Stuff!" name="query">
+        </form>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="userWelcome">
+            <p> Welcome Back, {{ username }} </p>
+            <img src="https://i.pravatar.cc/60" alt="" onclick="window.location.href = '{{ url_for('profile') }}'">
+        </div>
+    </header>
+    <div class="subHeaderContainer">
+    <span class="subHeader">
+        <div class="categoryButtonContainer" id="categoryBakeryLink">
+            <a class="categoryTitle" href="{{ url_for('bakery') }}">Bakery</a>
+            <h1 class="categoryIcon">🍰</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryStationaryLink">
+            <a class="categoryTitle" href="{{ url_for('stationary') }}">Stationary</a>
+            <h1 class="categoryIcon">️📋</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryGadgetsLink">
+            <a class="categoryTitle" href="{{ url_for('gadgets') }}">Gadgets</a>
+            <h1 class="categoryIcon">📱</h1>
+        </div>
+        <div class="categoryButtonContainer" id="categoryHouseholdLink">
+            <a class="categoryTitle" href="{{ url_for('household') }}">Household</a>
+            <h1 class="categoryIcon">🧴</h1>
+        </div>
+    </span>
+    </div>
+
+<!------------------------------------------------------------------------------------------------------------->
+<!--Header Ends here-->
+
+
+    <div class="bannerContainer">
+        <div class="banner">
+            <h1 class="bannerText">LOCALITE</h1>
+        </div>
+    </div>
+    <section class="categoriesContainer" >
+    <section class="categories" >
+        <div class="Category-Heading">
+            <p>WE PROUDLY OFFER</p>
+        </div>
+
+        <span class="categoryRow">
+            <div class="category" id="categoryStationary">
+                <a href="{{ url_for('stationary') }}">Stationary</a>
+            </div>
+            <div class="category" id="categoryHousehold">
+                <a href="{{ url_for('household') }}">Household</a>
+            </div>
+        </span>
+        <span class="categoryRow">
+            <div class="category" id="categoryGadgets">
+                <a href="{{ url_for('gadgets') }}">Gadgets</a>
+            </div>
+            <div class="category" id="categoryBakery">
+                <a href="{{ url_for('bakery') }}">Bakery</a>
+            </div>
+        </span>
+
+    </section>
+    </section>
+    <div id="mapContainer"></div>
+
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="/static/res/logo.png" alt=""></a>
+                    <h1 class="logoName" style="color: white;"> Sweet Cake </h1>
+                </div>
+
+                <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus
+                    maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>apex@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit">
+            created by <span>APEX</span> |all rights reserved !
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let map = L.map('mapContainer').setView([{{ user.latitude }}, {{ user.longitude }}], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+        map.invalidateSize()
+        let markers = [];
+        {%  for shop in shops %}
+        var bakery_icon = L.icon({
+          iconUrl: "static/res/bakery_icon.png",
+          iconSize: [32, 32],
+        });
+        var stationary_icon = L.icon({
+          iconUrl: "static/res/stationary_icon.png",
+          iconSize: [32, 32],
+        });
+        var gadgets_icon = L.icon({
+          iconUrl: "static/res/gadgets_icon.png",
+          iconSize: [32, 32],
+        });
+        var household_icon = L.icon({
+          iconUrl: "static/res/household_icon.png",
+          iconSize: [32, 32],
+        });
+        if ("{{ shop.category }}" == "Bakery"){
+            marker = (L.marker([{{ shop.latitude }}, {{ shop.longitude }}],{icon:bakery_icon}).addTo(map));
+        } else if("{{ shop.category }}" == "Stationary") {
+            marker = (L.marker([{{ shop.latitude }}, {{ shop.longitude }}],{icon:stationary_icon}).addTo(map));
+        } else if("{{ shop.category }}" == "Household") {
+            marker = (L.marker([{{ shop.latitude }}, {{ shop.longitude }}],{icon:household_icon}).addTo(map));
+        } else {
+            marker = (L.marker([{{ shop.latitude }}, {{ shop.longitude }}],{icon:gadgets_icon}).addTo(map));
+        }
+        marker.on('click', function() {
+            window.location.href = '{{ url_for('shop',shp=shop.email) }}'
+        });
+        marker.bindPopup("{{ shop.name }}",{autoPan: true, autoPanPadding: [5, 5]});
+        marker.on('mouseover', function() {
+            this.openPopup();
+        });
+        marker.on('mouseout', function() {
+            this.closePopup();
+        });
+        markers.push(marker);
+        {% endfor %}
+    </script>
+</body>
+
+</html>

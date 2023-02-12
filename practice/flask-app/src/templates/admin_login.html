@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style_admin_login.css') }}">
+    <title>Admin Login</title>
+</head>
+<body>
+  <form id="formLogin" action="#" method="post">
+    <label for="username" id="labelUsername">Username:</label>
+    <input type="text" id="inputUsername" name="username">
+    <br><br>
+    <label for="password" id="labelPassword">Password:</label>
+    <input type="password" id="inputPassword" name="password">
+    <a href="{{ url_for('admin_register') }}">Click to register</a>
+    <br><br>
+    <input type="submit" id="inputSubmit" value="Login">
+  </form> 
+</body>
+</html>
+

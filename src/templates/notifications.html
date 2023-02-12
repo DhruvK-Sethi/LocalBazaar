@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='style_admin.css') }}"
+    />
+    <title>LocalBazaar</title>
+  </head>
+
+  <body>
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class="bx bxs-smile"></i>
+        <span class="text">LocalBazaar</span>
+      </a>
+      <ul class="side-menu top">
+        <li>
+          <a href="{{url_for('admin')}}">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('add_stock')}}">
+            <i class="bx bx-plus" aria-hidden="true"></i>
+            <span class="text">Add Stock</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('view_stock')}}">
+            <i class="bx bxs-smile" aria-hidden="true"></i>
+            <span class="text">View Stock</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('update_stock')}}">
+            <i class="bx bx-pencil" aria-hidden="true"></i>
+            <span class="text">Update Stock</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="{{url_for('notifications')}}">
+            <i class="bx bx-bell" aria-hidden="true"></i>
+            <span class="text">Notifications</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="content">
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Notifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Notifications</h3>
+            </div>
+            <table>
+              <tbody>
+                {% for notif in notifications %}
+                <tr>
+                  <td>{{ notif }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="/static/index_admin.js"></script>
+  </body>
+</html>

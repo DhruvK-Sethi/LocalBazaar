@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_product.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logoContent">
+            <img src="/static/res/Logo.png" alt="1" height="60px" width="60px">
+            <h1 class="logoName">LocaLite</h1>
+        </div>
+
+
+        <div class="search-bar">
+            <form action="" id="searchQuery">
+                <input type="text" placeholder=" Search for Stuff!" id = "search_Feild" onclick="displaySearchItems()" onblur="HideDisplaySearchItems()">
+            </form>
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+            <div class="searchHistory" id = "search_History">
+                <ul id = "search_List">
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="userWelcome" >
+            <p id = "username" >
+            Welcome Back, {{ username }}
+            </p>
+
+            <img src="https://i.pravatar.cc/60" alt="" onclick="location.reload()">
+        </div>
+
+    </header>
+
+    <!------------------------------------------------------------------------------------------------------------->
+    <!--Header Ends here-->
+
+
+    <section class="product">
+        <div class="productImages">
+            <div id="mapWrapper" class="productImage">
+            </div>
+        </div>
+
+
+        <div class="productDetail">
+            <div class="productDescription">
+                <main-heading id = "productName">{{ shop.shop_name }}</main-heading>
+                <main-heading >{{ shop.category }}</main-heading>
+                <product-description>{{ shop.shop_city }},{{ shop.shop_state }}</product-description>
+
+                <br>
+                <heading>Email</heading>
+                <value>{{ shop.email }}</value>
+                <br>
+                <heading>Phone Number</heading>
+                <value>{{ shop.phone }}km</value>
+                <form method="post" action="#">
+                <button type="submit">Wishlist Now</button>
+                </form>
+                <button id = "Whatsapp" onclick="window.location.href = 'https://wa.me/+91' + {{ shop.phone }}"> Whatsapp </button>
+                <button id = "Whatsapp" onclick="window.location.href = 'https://maps.google.com/?q={{ shop.latitude }},{{ shop.longitude }}' + {{ shop.phone }}"> View On Maps </button>
+                <h1>Products:</h1>
+                {% for product in products %}
+                {{ product.name }}
+                <br>
+                {% endfor %}
+            </div>
+            <div class="contact-now"></div>
+        </div>
+
+    </section>
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="/static/res/logo.png" alt=""></a>
+                    <h1 class="logoName" style="color: white;"> Sweet Cake </h1>
+                </div>
+
+                <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus
+                    maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>apex@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit">
+            created by <span>APEX</span> |all rights reserved !
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let map = L.map('mapWrapper').setView([{{ shop.latitude }}, {{ shop.longitude }}], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+        map.invalidateSize()
+        let marker = L.marker([{{ shop.latitude }}, {{ shop.longitude }}]).addTo(map);
+    </script>
+</body>
+
+</html>
