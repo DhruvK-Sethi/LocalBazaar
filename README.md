@@ -43,6 +43,11 @@ It is as an e-commerce platform that connects local shops with the web. The plat
 ## Code of Conduct
 
 ## Authors
+1. Davesh Sharma
+2. Aarchie Maggu
+3. Dhruv Kumar
+4. Ekuspreet Singh
+5. Harsimran Singh Jaggi
 
 ## License
 
