@@ -56,3 +56,7 @@ It is as an e-commerce platform that connects local shops with the web. The plat
 ## License
 
 ## Acknowledgements
+1. ChatGPT
+2. chart.js
+3. geopy
+4. leaflet
