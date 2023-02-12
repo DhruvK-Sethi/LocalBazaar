@@ -38,12 +38,12 @@ List any necessary software, tools, and technologies that are required for the p
 It is as an e-commerce platform that connects local shops with the web. The platform provides results to users based on the closest distance from their location and provides prediction graphs for shopkeepers to help them update their stock to meet the latest demand. For users, the platform allows them to search for local shops and view the products they have available. The platform uses the user's location to show the results based on the closest distance, making it easier for them to find a shop near their location. For shopkeepers, the platform provides prediction graphs that show the latest demand for their products. This information can help them
 
 
-##Contribution Guidelines
+## Contribution Guidelines
 
-##Code of Conduct
+## Code of Conduct
 
-##Authors
+## Authors
 
-##License
+## License
 
-##Acknowledgements
+## Acknowledgements
