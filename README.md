@@ -1,4 +1,4 @@
-# APEX
+# LocalBazaar
 
 LocalBazaar is  an E-Commerce Web Platform which connects local shops to customers by providing them an online marketplace for selling and locating products near them respectively.
 
